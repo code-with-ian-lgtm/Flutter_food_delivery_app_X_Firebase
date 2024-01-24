@@ -1,0 +1,2 @@
+# Flutter_food_delivery_app_X_Firebase
+Developing Flutter app and intergrating Firebase functionalities
