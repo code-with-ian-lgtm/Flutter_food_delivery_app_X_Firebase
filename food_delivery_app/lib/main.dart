@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_delivery_app/pages/intro_page.dart';
+import 'package:food_delivery_app/pages/home_page.dart';
 import 'package:food_delivery_app/theme/light_mode.dart';
 
 void main() {
@@ -13,9 +13,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: lightMode,
-      home: const introPage()
+      home: const HomePage()
     );
   }
 }

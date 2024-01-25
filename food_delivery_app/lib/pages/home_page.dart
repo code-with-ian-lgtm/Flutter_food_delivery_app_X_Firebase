@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_slider_drawer/flutter_slider_drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,8 +15,18 @@ class HomePage extends StatelessWidget {
         style: TextStyle(
           fontSize: 20,
           fontWeight: FontWeight.bold
-        ),),
+        ),
+        ),
+        
       ),
+      drawer: SliderDrawer(slider: Container(color: Colors.red), child:Column(
+        children: [
+          ListTile(
+            leading: Icon(Icons.home),
+            title: Text("Home"),
+          )
+        ],
+      )),
       body: Column(
         children: [
           Container(
@@ -25,11 +36,21 @@ class HomePage extends StatelessWidget {
         ],
         
       ),
-      bottomNavigationBar: CurvedNavigationBar(items: 
+      bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Theme.of(context).colorScheme.background,
+        items: 
       <Widget>[
-      Icon(Icons.add, size: 30),
-      Icon(Icons.list, size: 30),
-      Icon(Icons.compare_arrows, size: 30),
+        
+      Icon(Icons.home,
+       size: 30,
+       color: Theme.of(context).colorScheme.tertiary,),
+      Icon(Icons.shopping_cart_checkout_rounded, 
+      size: 30,
+      color: Theme.of(context).colorScheme.tertiary),
+      Icon(Icons.settings, 
+      size: 30,
+      color: Theme.of(context).colorScheme.tertiary,
+      ),
     ],
       ),
     );
