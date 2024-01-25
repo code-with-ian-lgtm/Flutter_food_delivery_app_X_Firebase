@@ -37,7 +37,6 @@ class HomePage extends StatelessWidget {
               leading: Icon(Icons.person),
               title: Text("Profile"),
             ),
-
             ListTile(
               leading: Icon(Icons.home),
               title: Text("Home"),
@@ -67,25 +66,19 @@ class HomePage extends StatelessWidget {
               title: Text("Deliveries"),
             ),
                   ],
+                  ),
 
-
-            
-                ),
-
-                Column(
+               const  Column(
             children: [
-              ListTile(
-                leading: Icon(Icons.logout),
-                title: Text("Logout"),
-                
+              Center(
+                child: ListTile(
+                  leading: Icon(Icons.logout),
+                  title: Text("Logout"),
+                  
+                ),
               )
             ],
           )
-
-          
-  
-
-
           ],
         ),        
       ),
